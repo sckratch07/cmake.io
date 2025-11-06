@@ -41,7 +41,7 @@ jobs:
       if: matrix.os == 'windows-latest' && matrix.compiler == 'msvc'
       uses: ilammy/msvc-dev-cmd@v1
 
-    - name: 🏗️ Set up compiler (macOS)
+    - name: Set up compiler (macOS)
       if: matrix.os == 'macos-latest'
       run: |
         if [ "${{ matrix.compiler }}" = "gcc" ]; then
