@@ -1,4 +1,4 @@
-name: cours_test
+name: Executable
 
 on:
   push:
@@ -45,7 +45,7 @@ jobs:
     - name: Run
       working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
       run: |
-        start /b .\cours_test.exe
+        start /b .\Executable.exe
         timeout /t 5
-        taskkill /f /im cours_test.exe
+        taskkill /f /im Executable.exe
       shell: cmd
