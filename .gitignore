@@ -1,6 +1,7 @@
 .vs/
 .vscode/
-.build/
+
+build\
 
 CMakeUserPresets.json
 CMakeCache.txt
