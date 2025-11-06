@@ -37,27 +37,35 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up compiler (Windows)
+    - name: Set up MSVC (Windows)
       if: matrix.os == 'windows-latest' && matrix.compiler == 'msvc'
       uses: ilammy/msvc-dev-cmd@v1
 
-    - name: Set up compiler (macOS)
-      if: matrix.os == 'macos-latest'
+    - name: Set up GCC/Clang (Linux/macOS)
+      if: matrix.os != 'windows-latest'
+      shell: bash
       run: |
-        if [ "${{ matrix.compiler }}" = "gcc" ]; then
-          brew install gcc
+        if [ "${{ matrix.c_compiler }}" = "gcc" ]; then
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            sudo apt-get update
+            sudo apt-get install -y build-essential
+          elif [ "${{ runner.os }}" = "macOS" ]; then
+            brew install gcc || true
+          fi
           export CC=gcc
           export CXX=g++
-        elif [ "${{ matrix.compiler }}" = "clang" ]; then
+        elif [ "${{ matrix.c_compiler }}" = "clang" ]; then
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            sudo apt-get update
+            sudo apt-get install -y clang
+          fi
           export CC=clang
           export CXX=clang++
         fi
-        shell: bash
+        echo "Using compiler: $CC ($CXX)"
     
     - name: Configure CMake
-      run: |
-        cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
-      run: |
-        cmake --build build --config Release
+      run: cmake --build build --config=Release
