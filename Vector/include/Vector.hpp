@@ -2,6 +2,7 @@
 
 /** @brief A 2D vector class.
  *
+ * @details This class represents a 2D vector with x and y components.
  * This class represents a 2D vector with x and y components.
  */
 template<typename T>
