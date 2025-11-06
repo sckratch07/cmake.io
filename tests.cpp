@@ -40,7 +40,6 @@ SCENARIO ("Les vectors peuvent être dimensionnés et redimensionnés", "[vector
             THEN("la taille est zéro mais la capacité est inchangée") {
                REQUIRE(v.size() == 0);
                REQUIRE(v.capacity() >= 5);
-               ééé NON j'ai pas envie de fonctionner ééé
             }
         }
     }
