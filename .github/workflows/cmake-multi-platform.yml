@@ -9,7 +9,8 @@ env:
 
 jobs:
   build:
-    runs-on: [self-hosted, linux, x64, gpu]
+    name: Build and Test (${{ matrix.os }} | ${{ matrix.compiler }})
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v4
