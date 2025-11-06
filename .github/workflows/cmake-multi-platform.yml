@@ -45,7 +45,7 @@ jobs:
     - name: Run
       working-directory: ${{github.workspace}}/build/${{env.BUILD_TYPE}}
       run: |
-        .\CMake_Project.exe &
+        start /b .\CMake_Project.exe
         timeout /t 5
         taskkill /f /im CMake_Project.exe
       shell: cmd
