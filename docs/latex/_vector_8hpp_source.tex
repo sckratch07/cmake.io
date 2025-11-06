@@ -1,0 +1,26 @@
+\doxysection{Vector.\+hpp}
+\hypertarget{_vector_8hpp_source}{}\label{_vector_8hpp_source}\index{Vector/include/Vector.hpp@{Vector/include/Vector.hpp}}
+\mbox{\hyperlink{_vector_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vector2_a9285797a14e3dddb4d62be95b1a70a11}{Vector2}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_vector2_a9285797a14e3dddb4d62be95b1a70a11}{Vector2}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_vector2_ae5aa1096d92d524af6550e964b4cd76b}{Vector2}}(T\ \mbox{\hyperlink{class_vector2_a78fa1f2ed5e261c7fbeb8f3536a1ee34}{x}},\ T\ \mbox{\hyperlink{class_vector2_a6cfed8355591aa269f4dba43bd806ef9}{y}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_vector2_ac64346b7f74cbe0a123815f01f461472}{Vector2}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_a9285797a14e3dddb4d62be95b1a70a11}{Vector2<U>}}\&\ other);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ T\ \mbox{\hyperlink{class_vector2_a78fa1f2ed5e261c7fbeb8f3536a1ee34}{x}}\{\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(0)\ \};}
+\DoxyCodeLine{00027\ \ \ \ \ T\ \mbox{\hyperlink{class_vector2_a6cfed8355591aa269f4dba43bd806ef9}{y}}\{\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(0)\ \};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_vector_8hpp_a9a23b7556315348f24946786b1a92049}{Vector2i}}\ =\ \mbox{\hyperlink{class_vector2}{Vector2<int>}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_vector_8hpp_a515167f27e0ad253cc2c70924cc01a30}{Vector2f}}\ =\ \mbox{\hyperlink{class_vector2}{Vector2<float>}};}
+\DoxyCodeLine{00032\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_vector_8hpp_ae8b298e80867d2a1e6fe6584170d3cb0}{Vector2u}}\ =\ \mbox{\hyperlink{class_vector2}{Vector2<unsigned\ int>}};}
+
+\end{DoxyCode}

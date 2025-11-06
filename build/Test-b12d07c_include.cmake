@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/o.squilbin/source/repos/CMake_Project/build/Test-b12d07c_tests.cmake")
+  include("C:/Users/o.squilbin/source/repos/CMake_Project/build/Test-b12d07c_tests.cmake")
+else()
+  add_test(Test_NOT_BUILT-b12d07c Test_NOT_BUILT-b12d07c)
+endif()
